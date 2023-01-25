@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothies</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <nav>
+        <h1><a href="/">Ninja Smoothies</a></h1>
+        <ul>
+            {{#ifCond user.email}}
+            <li>
+                Welcome, {{user.email}}
+            </li>
+
+            <li>
+                <a href="/logout">Log Out</a>
+            </li>
+            {{else}}
+            <li>
+                <a href="/login">Log In</a>
+            </li>
+            <li>
+                <a href="/signup" class="btn">Sign Up</a>
+            </li>
+
+            {{/ifCond}}
+        </ul>
+    </nav>
